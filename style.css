@@ -1,4 +1,5 @@
 body {
+  margin: 0;
   min-height: 100vh;
   width: 100vw;
   display: flex;
@@ -11,16 +12,36 @@ form {
   background-color: lightgray;
   border-radius: 5px;
   border: 2px solid gray;
+  width: clamp(20%, 350px, 95%);
 }
 .form-control {
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
+  padding: 0.3rem;
+}
+
+span {
+  height: 1rem;
+  font-size: .75rem;
+  color: red;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+span.visible {
+  opacity: 1;
 }
 
 input, select {
+  background-color: white;
+  border: 1px solid gray;
   border-radius: 5px;
   padding: 5px;
+}
+
+input:disabled {
+  background-color: rgba(255, 255, 255, .6);
+  border: 1px solid rgba(255, 255, 255, .2);
 }
 
 input:user-invalid {
@@ -29,4 +50,17 @@ input:user-invalid {
 
 input:user-valid {
   border: 2px solid darkgreen;
+}
+
+button {
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+button:disabled {
+  background-color: lightblue;
 }
