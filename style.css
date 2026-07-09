@@ -1,0 +1,32 @@
+body {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  padding: 10px;
+  background-color: lightgray;
+  border-radius: 5px;
+  border: 2px solid gray;
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+input, select {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input:user-invalid {
+  border: 2px solid darkred;
+}
+
+input:user-valid {
+  border: 2px solid darkgreen;
+}
